@@ -8,7 +8,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
   })
 export class ChartsGenerator {
     
-    createCharts(infogDiv,datum) {
+    remote(infogDiv,datum) {
 
         // Themes begin 
         am4core.useTheme(am4themes_animated);

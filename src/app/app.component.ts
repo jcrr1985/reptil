@@ -37,7 +37,6 @@ export class AppComponent implements OnInit {
     this.cg.createCharts("infogr-2", this.datum1);
     })
 
-
   }
 
 
