@@ -21,25 +21,18 @@ export class AppComponent implements OnInit {
   datum1;
   datum2;
   
-
-
-  constructor(private cg: ChartsGenerator, private ds:DatumServiceService) { 
-    
-  }
-
+  constructor(private cg: ChartsGenerator, private ds:DatumServiceService) { }
 
   ngOnInit() {
-    this.ds.GetIssues().subscribe(res => {
-     this.datum1 = res;
-     this.datum2 = res;    
-     
-    this.cg.createCharts("infogr-1", this.datum1);
-    this.cg.createCharts("infogr-2", this.datum1);
-    })
-
+    this.ds.GetIssues1().subscribe(res => {
+      this.datum1 = res;
+      this.cg.createCharts("infogr-1", this.datum1);
+     })
+     this.ds.GetIssues2().subscribe(res => {
+       this.datum2 = res;
+       this.cg.createCharts("infogr-2", this.datum2);
+      })
+    }
   }
 
 
-
-
-}
