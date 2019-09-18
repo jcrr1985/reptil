@@ -10,29 +10,37 @@ import { retry, catchError } from 'rxjs/operators';
 export class DatumServiceService {
 
   baseurl = 'http://localhost:3000/';
+  constructor(private http: HttpClient) { }
 
-  constructor(private http:HttpClient) { }
+  //GET Brands from API
 
-    // Http Headers
-    httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }
+  getBrands(): Observable<string[]> {
+    return this.http.get<string[]>(this.baseurl + "brands")
+  };
 
-  // GET
+  // Http Headers
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
 
+  // GET para traer la data de la api que crea los charts concatendandolo con los las props, suscribiendo, asignando a varibles, y usando estas como parametros de alimetacion con data  a los chartGenerators.
   GetIssues(p): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl + p)
-    .pipe(
-      retry(1),
-      catchError(this.errorHandl)
-    )
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
   }
-   // Error handling
-   errorHandl(error) {
+
+  //Forining the API: ask in stack overlflow
+
+
+  // Error handling
+  errorHandl(error) {
     let errorMessage = '';
-    if(error.error instanceof ErrorEvent) {
+    if (error.error instanceof ErrorEvent) {
       // Get client-side error
       errorMessage = error.error.message;
     } else {
@@ -41,6 +49,8 @@ export class DatumServiceService {
     }
     console.log(errorMessage);
     return throwError(errorMessage);
- }
+  }
+
+
 
 }

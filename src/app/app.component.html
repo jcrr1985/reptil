@@ -28,7 +28,7 @@
     accusantium. Vitae incidunt ipsam placeat reprehenderit distinctio beatae. Doloremque quis, facilis consequatur ea
     ut eligendi repudiandae!
   </div>
-  <div class="infogr infogr-2" fxFlex="50%">
+  <div class="infogr infogr-2" fxFlex.xs="100%" fxFlex="50%" >
   </div>
 
 
@@ -37,11 +37,13 @@
 <div class="container" fxLayout>
   <mat-form-field>
     <mat-label>Select an option</mat-label>
-    <mat-select>
+    <mat-select >
       <mat-option>Seleccione Producto</mat-option>
       <!--LLenar esto con un ngFor que recorra lo que traiga desde el backend a traves de la API-->
-      <mat-option value="">Option 1</mat-option>
+      <mat-option *ngFor="let brand of brands">{{brand}}</mat-option>
     </mat-select>
   </mat-form-field>
+
+  <a mat-raised-button color="primary" (click)=modifyIssue()> Modify here :)</a>
   
 </div>
