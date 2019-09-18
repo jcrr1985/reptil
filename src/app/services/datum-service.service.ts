@@ -21,16 +21,9 @@ export class DatumServiceService {
     }
 
   // GET
-  GetIssues1(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseurl + 'datum1/')
-    .pipe(
-      retry(1),
-      catchError(this.errorHandl)
-    )
-  }
 
-  GetIssues2(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseurl + 'datum2/')
+  GetIssues(p): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl + p)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
