@@ -18,6 +18,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
+
+
 import {
   MatButtonModule,
   MatFormFieldModule,
@@ -27,6 +29,9 @@ import {
 
 import { ChartsGenerator } from './chartsGenerator';
 import { DatumServiceService } from "./services/datum-service.service";
+
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { MainCompComponent } from './main-comp/main-comp.component';
 
 const modules = [
   MatButtonModule,
@@ -38,7 +43,9 @@ const modules = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductDetailComponent,
+    MainCompComponent
   ],
   imports: [
     BrowserModule,

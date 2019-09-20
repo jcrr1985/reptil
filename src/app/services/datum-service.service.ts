@@ -14,8 +14,9 @@ export class DatumServiceService {
 
   //GET Brands from API
 
-  getBrands(): Observable<string[]> {
-    return this.http.get<string[]>(this.baseurl + "brands")
+  getBrands(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl + "brands" )
+   
   };
 
   // Http Headers
@@ -32,6 +33,10 @@ export class DatumServiceService {
         retry(1),
         catchError(this.errorHandl)
       )
+  }
+
+  getProductDetail(id){
+    return this.http.get<any>('/product-details/' + id)
   }
 
   //Forining the API: ask in stack overlflow

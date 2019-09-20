@@ -51,5 +51,5 @@
         "expenses": 24.3,
         "id":4
     }],
-    "brands":["Google","Facebook","Twitter","Instagram"]
+    "brands":[{"id":0,"name":"Facebook"},{"id":1,"name":"Google"},{"id":2,"name":"Apple"},{"id":3,"name":"BitVoid"}]
 }
