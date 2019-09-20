@@ -2,6 +2,8 @@ Angular 8 App:
 
 Description in a nutshell: 1) API is created, served by json-server. A service.ts file is created which continas several methods that make use of Angular httpCLientModule to make requests to the API endpoints. The service is injected in the main component.ts, and its methods,  which draws the view, are called here, receiving different parameters.
 
+(PLEASE NOTE: In order to display this webapp correctly, please NPM install json-server and serve the amchartData.json API provided in this project, as the app retrieve all the data from there)
+
 Steps:
 
 1) Created a JSON API, containin the data which fed the functions that generate the charts, and also populates the Angular Material `select` element.
