@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { MatToolbarModule, MatIconModule, MatSidenavModule } from  '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -52,7 +54,8 @@ const modules = [
     ReactiveFormsModule,
     MatSelectModule,
     HttpClientModule,
-    ...modules
+    ...modules,
+    MatProgressSpinnerModule
   ],
   exports:[
     ...modules
