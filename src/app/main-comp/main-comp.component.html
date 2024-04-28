@@ -1,44 +1,27 @@
 <div class="container" fxLayout>
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <button mat-icon-button>
-          <mat-icon (click)="sidenav.toggle()"></mat-icon>
-        </button>
-        <h1>SimpleCRM</h1>
-        <span class="menu-spacer"></span>
-        <div>
-          <a mat-button [routerLink]="'/accounts'"> Accounts </a>
-          <a mat-button [routerLink]="'/create-account'"> Create Account </a>
-          <a mat-button [routerLink]="'/contacts'"> Contacts </a>
-          <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
-          <a mat-button [routerLink]="'/activities'"> Activities </a>
-          <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
-  
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Reptil</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/accounts'"> Lorem </a>
+        <a mat-button [routerLink]="'/create-account'">Ipsum </a>
+        <a mat-button [routerLink]="'/contacts'"> Dolor</a>
+        <a mat-button [routerLink]="'/create-contact'">Sit </a>
+        <a mat-button [routerLink]="'/activities'">Amet </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="container a" fxLayout fxLayout.xs="column" fxLayoutGap="10px">
+  <div *ngIf="!datum1" fxFlex="100%" fxLayoutAlign="center center">
+    <mat-spinner></mat-spinner>
   </div>
-  
-  
-  <div class="container a" fxLayout fxLayout.xs="column" fxLayoutGap="10px" >
-    <div *ngIf="!datum1" fxFlex="100%"  fxLayoutAlign="center center">
-      <mat-spinner></mat-spinner>
-    </div>
-  
-    <div class="infogr infogr-1" fxFlex="50%" ></div>
-    <div class="infogr infogr-2" fxFlex.xs="100%" fxFlex="50%"></div>
-  </div>
-  
-  <div class="container" fxLayout>
-    <mat-form-field>
-      <mat-label>Select an option</mat-label>
-      <mat-select >
-        <mat-option>Seleccione Producto</mat-option>
-        <!--LLenar esto con un ngFor que recorra lo que traiga desde el backend a traves de la API-->
-       <a [routerLink]="['/product-details/', brand.id]" *ngFor="let brand of brandsArr"> <mat-option >{{brand.name}}</mat-option></a>  
-      </mat-select>
-    </mat-form-field>
-  
-    <a mat-raised-button color="primary" (click)=modifyIssue()> Modify here :)</a>
-    
-  </div>
+
+  <div class="infogr infogr-1" fxFlex="50%"></div>
+  <div class="infogr infogr-2" fxFlex.xs="100%" fxFlex="50%"></div>
+</div>

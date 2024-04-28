@@ -1,5 +1,6 @@
 {
-    "datum1" : [{
+    "datum1" : [
+      {
         "year": 2005,
         "income": 23.5,
         "expenses": 18.1,
@@ -25,7 +26,8 @@
         "expenses": 24.6,
         "id":4
     }],
-    "datum2" :[{
+    "datum2" :[
+      {
         "year": 2005,
         "income": 33.5,
         "expenses": 38.1,
